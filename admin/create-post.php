@@ -123,9 +123,11 @@ if ( !empty($titulo) && !empty($conteudo) ) {
               <div class="col-md-4">
                 <select id="categoria" name="categoria" class="form-control">
                   <?php
-                    $query = " SELECT * from categoria";
-                    $sql = mysql_query($query);
-                    while($rs = mysql_fetch_array($sql)) {
+                      $query = " SELECT * from categoria";
+
+                      $sql = mysql_query($query);
+
+                      while($rs = mysql_fetch_array($sql)) {
                   ?>
                   <option value="<?php echo $rs['id']; ?>"><?php echo $rs['nome']; ?></option>
                   <?php } ?>
